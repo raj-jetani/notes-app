@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <scriptsrc="https: //ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
+        {{!--
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <script src="/js/script.js"></script>
+        <title>My Notes</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: #202124;
+                color: white;
+            }
+
+            .container {
+                width: 100%;
+                background-color: #121212;
+            }
+
+            .brand-name {
+                float: left;
+                margin: 20px;
+                font-weight: 700;
+            }
+
+            .reglog {
+                float: right;
+            }
+
+            li {
+                list-style: none;
+                display: inline-block;
+                margin: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: rgb(175, 175, 175);
+            }
+
+            .section {
+                margin: 30px;
+            }
+
+            .btn {
+                background-color: #121212;
+            }
+
+            .btn:hover {
+                color: rgb(175, 175, 175);
+            }
+
+            @media only screen and (max-width: 2500px) and (min-width: 320px) {
+                .brand-name {
+                    float: left;
+                    font-size: 20px;
+                    margin: 25px 0px 0px 5px;
+                    font-weight: 700;
+                }
+
+                .login {
+                    display: inline-block;
+                    font-size: 10px;
+                }
+
+                .signup {
+                    display: inline-block;
+                    font-size: 10px;
+                }
+
+                li {
+                    list-style: none;
+                    margin: 22px 5px;
+                }
+            }
+        </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <a class="brand-name" href="/">NOTES APP</a>
+
+            <div class="regLog">
+                <ul>
+                    <li class="login">
+                        <a class="nav-link" href="/auth/signin">Login</a>
+                    </li>
+                    <li class="signup">
+                        <a class="nav-link" href="/auth/signup">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section">
+        <h1 class="display-4">Notes App Nodejs And Mongodb!</h1>
+        <p class="lead">A simple App to manage Notes developed with Nodejs, Express,
+            Mongodb and Javascript Technologies</p>
+        <div>
+            <a class="btn" href="/auth/signup">Register</a>
+        </div>
+    </div>
+</body>
+
+</html>

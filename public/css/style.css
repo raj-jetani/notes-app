@@ -1,0 +1,223 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+.nav-div {
+    width: 100%;
+    background-color: #121212;
+}
+
+.brand-name {
+    float: left;
+    margin: 0 30px;
+    font-weight: 700;
+    /* font-size: 25px; */
+}
+
+.regLog {
+    float: right;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.nav-div a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+}
+
+body{
+    background-color: #202124;
+    color: white;
+}
+
+#take-note{
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column; 
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: none;
+}
+
+
+input, textarea{
+    background-color: #202124;
+    border: none;
+    padding: 5px;
+    outline: none;
+    font-size: 1.7rem;
+    width: 96%;
+    margin: 5px 10px;
+    display: block;
+}
+
+textarea{
+    overflow:hidden;
+    resize:none;
+}
+
+.btn{
+    border: none;
+    width: 100%;
+    font-size: 1.7rem;
+    outline: none;
+    background-color: #303030;
+    outline: none;
+}
+
+.btn:hover{
+    color: rgb(168, 168, 168);
+    outline: none;
+}
+
+.all-notes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+}
+
+.all-notes .container{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: auto;
+    overflow: hidden;
+    cursor: default;
+    flex-direction: column;
+    justify-content: safe;
+    text-align: center;
+    background-color: #303030; 
+    color: white;
+    position: relative;
+
+}
+
+.all-notes .container #note-heading{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+#edit-icon{
+    position: absolute;
+    right: 8;
+    top: 8;
+    font-size: 17px;
+}
+
+.all-notes .container p{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    min-height: 80px;
+    text-align: justify;
+    margin: 10px 0px;
+}
+
+a{
+    color: white;
+}
+
+#delete-form{
+    margin-top: 20px;
+}
+
+#edit-note-form{
+    display: flex;
+    flex-direction: column; 
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.alert{
+    width: 250px;
+    text-align: center;
+    margin: 0px auto;
+    position: relative;
+}
+
+/* .close-btn{
+    position: absolute;
+    right: 10;
+    top: 5;
+} */
+
+.button{
+    background-color: #dff0d8;
+    display: block;
+    margin: 0px auto;
+}
+
+@media only screen and (max-width: 480px) and (max-height:1200px){
+    .all-notes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+    }
+
+    .nav-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0px 0px 0px;
+        margin: 0px;
+    }
+
+    .brand-name{
+        margin: 0 15px;
+    }
+
+    .logout{
+        margin: 0 15px 0 0;
+    }
+
+    #form{
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    
+    input, textarea{
+        width: 91%;
+    }
+
+    #edit-note-form{
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #edit-note-form input, textarea{
+        width: 91%;
+    };
+}

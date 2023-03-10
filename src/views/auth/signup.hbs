@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/41a3e5722e.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/css/signup.css">
+    <title>SignUp - Notes App</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-div">
+            <a class="brand-name" href="/">NOTES APP</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <p id="left-heading">Welcome Back</p>
+            <p id="text">To keep connected with us please login with your personal info</p>
+            <button class="btn left-btn"> <a href="/auth/signin">Sign in</a> </button>
+        </div>
+        <div class="right">
+            <p id="right-heading">Create Account</p>
+
+            {{#if message}}
+                <div class="alert alert-{{status}} alert-white rounded">
+                    {{message}}
+                </div>
+            {{/if}}
+
+            <form action="/auth/signup" method="post">
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                </div>
+                <div class="input-field">
+                    <i style="font-size:17px" class="fa">&#xf0e0;</i>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock password-i"></i>
+
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-lock password-i"></i>
+
+                    <input type="password" name="cpassword" class="form-control" id="cpassword"
+                        placeholder="Confirm Password" required>
+                </div>
+                <p class="red"> - your password must be at least 8 characters including a lowercase and an uppercase letter, a symbol and a number</p>
+                <button type="submit" class="btn right-btn">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
